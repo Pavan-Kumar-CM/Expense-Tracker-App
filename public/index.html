@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FinTrack</title>
+</head>
+
+<body>
+    <form action="/add" method="POST">
+        <h1 class="neon-text">FinTrack</h1>
+        <div class="input-section">
+            <label for="category_select">Category: </label>
+            <select id="category_select" name="category_select">
+                <option value="Expense">Expense</option>
+                <option value="Income">Income</option>
+            </select>
+            <label for="amount_input">Amount: </label>
+            <input type="number" id="amount_input" name="amount_input" placeholder="">
+            <label for="info" ">Information</label>
+            <input type=" text" id="info" name="info" placeholder="Purpose? (Salary, Groceries)">
+                <label for="date_input">Select the date:</label>
+                <input type="date" id="date_input" name="date_input">
+                <button id="add_btn">Add</button>
+        </div>
+    </form>
+
+    <div class="expenses-list">
+        <h2 class="neon-text">List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Information</th>
+                    <th>Date</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="expense-table-body">
+
+            </tbody>
+            <tfoot>
+                <td>Total:</td>
+                <td id="total-amount"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
